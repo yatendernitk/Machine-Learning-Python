@@ -2,9 +2,7 @@ import numpy as np
 
 
 class Neural_Network:
-
         # to calculate forward propogation for our defined input
-
     def __init__(self):
         # will assume our input layer size = 2, op layer size =1 and hidden
         # layer size is 1
@@ -23,3 +21,8 @@ class Neural_Network:
 
     def sigmoid(self, z):
         return 1 / (1 + np.exp(-z))
+
+    def sigmoidPrime(self, z):
+        # derivative of sigmoid Function
+        return np.exp(-z) / (1 + np.exp(-z)**2)
+    
